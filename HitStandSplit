@@ -21,7 +21,10 @@ public class HitStandSplit
                         {
                                 if(x.equals("chrisism"))
                                 {
-                                System.out.println("May the prophets bless your soul for eternity. He who shalt betray will be decimated by the holy lights of the 5 prophets of both heaven and hell. He who shalt betray will be locked in the Neverland. He who shalt betray will be lost in the darkness of Chrisism.");
+                                System.out.println("May the prophets bless your soul for eternity.\n
+                                He who shalt betray will be decimated by the holy lights of the 5 prophets\n
+                                of both heaven and hell. He who shalt betray will be locked in the Neverland.\n
+                                He who shalt betray will be lost in the darkness of Chrisism.");
                                 }
                                 else
                                 {
