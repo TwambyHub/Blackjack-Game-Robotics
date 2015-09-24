@@ -25,22 +25,25 @@ public class HitStandSplit
                                 He who shalt betray will be decimated by the holy lights of the 5 prophets\n
                                 of both heaven and hell. He who shalt betray will be locked in the Neverland.\n
                                 He who shalt betray will be lost in the darkness of Chrisism.");
+                                System.exit(0)
                                 }
                                 else
                                 {
                                         if(x.equals("wayne"))
                                         {
                                         System.out.println("go to kik convo for actual pic of wayne.");
+                                        System.exit(0)
                                         }
                                         else
                                         {
                                                 if(x.equals("split"))
                                                 {
-                                                System.out.println("better off 2 fo' 1.");
+                                                System.out.println("Better off 2 fo' 1.");
                                                 }
                                                 else
                                                 {
-                                                System.out.println("Homie, we ain't playin' no games up in here. Get outta here or hit me up once mo");
+                                                System.out.println("Homie, we ain't playin' no games up in here.\n
+                                                Get outta here or hit me up once mo");
                                                 System.exit(0);
                                                 }
                                         }
