@@ -9,13 +9,13 @@ public class HitStandSplit
                 String x = input.nextLine();
                 if(x.equals("hit"))
                 {
-                        System.out.println("like your chances pretty boy? 'ight, i got chu.");
+                        System.out.println("Like your chances pretty boy? 'ight, I got chu.");
                 }
                 else
                 {
                         if(x.equals("stand"))
                         {
-                        System.out.println("what a wuss. i be takin yo' money tonite.");
+                        System.out.println("What a wuss. I be takin yo' money tonight.");
                         }
                         else
                         {
