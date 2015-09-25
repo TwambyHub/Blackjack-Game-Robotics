@@ -7,4 +7,4 @@ Credits:
 <li>SypherXN</li>
 <li>Truump</li>
 <li>twamble</li>
-<li>Wanye West</li>
+<li>Wanye West (Coolest User Here)</li>
