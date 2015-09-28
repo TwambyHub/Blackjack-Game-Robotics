@@ -10,7 +10,7 @@ public class Gamestate
 	int dealerHand = HitStandSplit.dealerHit();
 
 
-	public static boolean playerWins
+	public static boolean playerWins()
 	{
 		boolean win = false;
 		if(int playerHand > int dealerHand|| int playerHand <= 21)
@@ -18,22 +18,22 @@ public class Gamestate
 			win = true
 		}
 	}
-	public static boolean ace
+	public static int[] ace()
 	{
+
+		/*int[] something = {
+			5, 4, 1, 11
+		};*/
 		if(playerHand > 21)
 		{
-			for(i = 0; i < deck.length - 1; i++)
+			for(int i = 0; i < something.length - 1; i++)
 			{
-				if(deck[i] == 11)
+				if(something[i] == 11)
 				{
-					deck[i] = 1;
+					something[i] = 1;
 				}
 			}
 		}
-		else
-		{
-
-		}
-
+	return something;
 	}
 }
