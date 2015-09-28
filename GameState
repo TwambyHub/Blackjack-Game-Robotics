@@ -1,3 +1,39 @@
 //verify cards are less than 21
 //save each new card to database as it is generated
 //ace- 1 or 11   if 11 can fit, it is 11
+//not yet finished
+//next person to see this must yolo roll -jerry & alec
+
+public class Gamestate
+{
+	int playerHand = HitStandSplit.playerHit();
+	int dealerHand = HitStandSplit.dealerHit();
+
+
+	public static boolean playerWins
+	{
+		boolean win = false;
+		if(int playerHand > int dealerHand|| int playerHand <= 21)
+		{
+			win = true
+		}
+	}
+	public static boolean ace
+	{
+		if(playerHand > 21)
+		{
+			for(i = 0; i < deck.length - 1; i++)
+			{
+				if(deck[i] == 11)
+				{
+					deck[i] = 1;
+				}
+			}
+		}
+		else
+		{
+
+		}
+
+	}
+}
