@@ -2,7 +2,7 @@
 //save each new card to database as it is generated
 //ace- 1 or 11   if 11 can fit, it is 11
 //not yet finished
-//next person to see this must yolo roll -jerry & alec
+//next person to see this must buy stones and yolo roll -jerry & alec
 
 public class Gamestate
 {
