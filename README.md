@@ -7,4 +7,4 @@ Credits:
 <li>SypherXN</li>
 <li>Truump</li>
 <li>twamble</li>
-<li>♚ Wanye West</li>
+<li><img src="http://help.twitch.tv/customer/portal/attachments/349941" width="18" height=17"> Wanye West</li>
