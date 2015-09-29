@@ -2,13 +2,11 @@ import java.util.*;
 
 public class Main
 {
+	public static int[] remove()
+	{
+		int[] deck = new Dealer.createAndShuffleDeck();
+	}
 	public static void main (String []args)
 	{
-		int[] deck = Dealer.createAndShuffleDeck();
-		int playerHand[];
-	    int dealerHand[];
-	    int dealerSecretCard = deck[3];
-	    String hchoice = new HitStandSplit.choice();
-	    System.out.println(hchoice);
 	}
 }
