@@ -6,34 +6,59 @@
 
 public class Gamestate
 {
-	int playerHand = HitStandSplit.playerHit();
-	int dealerHand = HitStandSplit.dealerHit();
+	int[] playerHand = HitStandSplit.playerHit();
+	int[] dealerHand = HitStandSplit.dealerHit();
+
+
+	public static int getPlayerTotal()
+	{
+		int playerTotal = 0;
+		for(i = 0; i < playerHand.legnth - 1; i++)
+		{
+			playerTotal += playerHand[i];
+		}
+	return playerTotal;
+	}
+
+
+	public static int getDealerTotal()
+	{
+		int dealerTotal = 0;
+		for(i = 0; i < dealerHand.legnth - 1; i++)
+		{
+			dealerTotal += dealerHand[i];
+		}
+	return dealerTotal;
+	}
 
 
 	public static boolean playerWins()
 	{
 		boolean win = false;
-		if(int playerHand > int dealerHand|| int playerHand <= 21)
+		if(int playerTotal > int dealerTotal && int playerTotal <= 21)
 		{
 			win = true
 		}
+	return win;
 	}
+
+
 	public static int[] ace()
 	{
 
 		/*int[] something = {
 			5, 4, 1, 11
 		};*/
-		if(playerHand > 21)
+		if(playerTotal > 21)
 		{
-			for(int i = 0; i < something.length - 1; i++)
+			for(int i = 0; i <playerHand.length - 1; i++)
 			{
-				if(something[i] == 11)
+				if(playerHand[i] == 11)
 				{
-					something[i] = 1;
+					playerHand[i] = 1;
 				}
 			}
 		}
-	return something;
+	return playerHand;
 	}
 }
