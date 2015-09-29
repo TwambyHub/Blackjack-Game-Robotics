@@ -1,54 +1,48 @@
-import java.util.Scanner;
+import java.util.*;
+
 public class HitStandSplit
 {
-        public static void main(String []args)
- 
+       
+        public static String choice()
         {
-                Scanner input = new Scanner(System.in);
+                Scanner inputchoice = new Scanner(System.in);
                 System.out.println("Cuh, whatchu want? Hit me up with yo choice of hit, stand, or split");
-                String x = input.nextLine();
-                if(x.equals("hit"))
+                String hchoice = inputchoice.nextLine();
+                if(hchoice.equals("hit")) 
                 {
                         System.out.println("Like your chances pretty boy? 'ight, I got chu.");
                 }
-                else
+                else if(hchoice.equals("stand")) 
                 {
-                        if(x.equals("stand"))
-                        {
                         System.out.println("What a wuss. I be takin yo' money tonight.");
-                        }
-                        else
-                        {
-                                if(x.equals("chrisism"))
-                                {
-                                System.out.println("May the prophets bless your soul for eternity.\n
-                                He who shalt betray will be decimated by the holy lights of the 5 prophets\n
-                                of both heaven and hell. He who shalt betray will be locked in the Neverland.\n
-                                He who shalt betray will be lost in the darkness of Chrisism.");
-                                System.exit(0)
-                                }
-                                else
-                                {
-                                        if(x.equals("wayne"))
-                                        {
-                                        System.out.println("go to kik convo for actual pic of wayne.");
-                                        System.exit(0)
-                                        }
-                                        else
-                                        {
-                                                if(x.equals("split"))
-                                                {
-                                                System.out.println("Better off 2 fo' 1.");
-                                                }
-                                                else
-                                                {
-                                                System.out.println("Homie, we ain't playin' no games up in here.\n
-                                                Get outta here or hit me up once mo");
-                                                System.exit(0);
-                                                }
-                                        }
-                                }
-                        }
                 }
+                else if(hchoice.equals("split")) 
+                {
+                        System.out.println("Better off 2 fo' 1.");
+                }
+                else 
+                {
+                        System.out.println("Homie, we ain't playin' no games up in here.\n" +
+                        "Get outta here or hit me up once mo");
+                        System.exit(0);
+                }
+                return hchoice;
+        }
+        public static int playerHit()
+        {
+                int phg = 2;
+                return phg;
+        }
+
+        public static int dealerHit()
+        {
+                int phs = 5;
+                return phs;
+        }
+
+        public static int split()
+        {
+                int pht = 10;
+                return pht;
         }
 }
