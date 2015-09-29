@@ -2,13 +2,13 @@ import java.util.*;
 
 public class Dealer
 {
-	int suit = 4;
-	int[] rank = {2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11};
+	static int suit = 4;
+	static int[] rank = {2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11};
 		
-	int ranks = rank.length;
-	int n = suit * ranks;
+	static int ranks = rank.length;
+	static int n = suit * ranks;
 
-	public int[] createAndShuffleDeck()
+	public static int[] createAndShuffleDeck()
 	{
 		int[] deck = new int[n];
 		for(int i = 0; i < ranks; i++)
@@ -25,9 +25,7 @@ public class Dealer
 			deck[r] = deck[i];
 			deck[i] = t;
 		}
-		
 		return deck;
-	
 	}
 	/*
 	for (int i = 0; i < n; i++)
