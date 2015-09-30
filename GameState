@@ -13,7 +13,7 @@ public class Gamestate
 	public static int getPlayerTotal()
 	{
 		int playerTotal = 0;
-		for(i = 0; i < playerHand.legnth - 1; i++)
+		for(i = 0; i < playerHand.length - 1; i++)
 		{
 			playerTotal += playerHand[i];
 		}
@@ -24,7 +24,7 @@ public class Gamestate
 	public static int getDealerTotal()
 	{
 		int dealerTotal = 0;
-		for(i = 0; i < dealerHand.legnth - 1; i++)
+		for(i = 0; i < dealerHand.length - 1; i++)
 		{
 			dealerTotal += dealerHand[i];
 		}
