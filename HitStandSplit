@@ -1,49 +1,48 @@
 import java.util.*;
 
-public class Dealer
+public class HitStandSplit
 {
-	static int suit = 4;
-	static int[] rank = {2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11};
-		
-	static int ranks = rank.length;
-	static int n = suit * ranks;
+       
+        public static String choice()
+        {
+                Scanner inputchoice = new Scanner(System.in);
+                System.out.println("Cuh, whatchu want? Hit me up with yo choice of hit, stand, or split");
+                String hchoice = inputchoice.nextLine();
+                if(hchoice.equals("hit")) 
+                {
+                        System.out.println("Like your chances pretty boy? 'ight, I got chu.");
+                }
+                else if(hchoice.equals("stand")) 
+                {
+                        System.out.println("What a wuss. I be takin yo' money tonight.");
+                }
+                else if(hchoice.equals("split")) 
+                {
+                        System.out.println("Better off 2 fo' 1.");
+                }
+                else 
+                {
+                        System.out.println("Homie, we ain't playin' no games up in here.\n" +
+                        "Get outta here or hit me up once mo");
+                        System.exit(0);
+                }
+                return hchoice;
+        }
+        public static int playerHit()
+        {
+                int phg = 2;
+                return phg;
+        }
 
-	public static List<Integer> createAndShuffleDeck()
-	{
-		int[] initialdeck = new int[n];
-		for(int i = 0; i < ranks; i++)
-		{
-			for (int j = 0; j < suit; j++)
-			{
-				initialdeck[suit * i + j] = rank[i];
-			}		
-		}
-		for(int i = 0; i < n; i++) 
-		{
-			int r = i + (int) (Math.random() * (n - i));
-			int t = initialdeck[r];
-			initialdeck[r] = initialdeck[i];
-			initialdeck[i] = t;
-		}
-		for(int a = 0; a < initialdeck.length; loop++)
-		{
-			if(Prices[a]>largest)
-			{
-				largest = prices[a];
-				System.out.println(initialdeck);
-			}
-			else if(prices[a]<smallest)
-			{
-				smallest = prices[a];
-			}
-		}
-		return deck;
-	}
-	/*
-	for (int i = 0; i < n; i++)
-	{
-		System.out.println(deck[i]);	
-	}
-	*/
+        public static int dealerHit()
+        {
+                int phs = 5;
+                return phs;
+        }
 
+        public static int split()
+        {
+                int pht = 10;
+                return pht;
+        }
 }
