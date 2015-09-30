@@ -20,7 +20,21 @@ public class HitStandSplit
                 {
                         System.out.println("Better off 2 fo' 1.");
                 }
-                else 
+                else if(hchoice.equals("You know what cuh, F dis"))
+                {
+                        System.out.println("I am very sorry for your poor experience here at BalLErZ Cuhsino\n"+
+                                "the staff wishes that your next visit will be more\n"+
+                                "..................................................\n"+
+                                "..................................................\n"+
+                                "..................................................\n");
+                        try {
+                                Thread.sleep(5000);
+                        } catch (InterruptedException e) {
+
+                        }
+                        System.out.println("ACEceptable!!!!!!!!!!!!!!\n"+
+                                "Jus' kiddin' screw you bruh");
+                } 
                 {
                         System.out.println("Homie, we ain't playin' no games up in here.\n" +
                         "Get outta here or hit me up once mo");
