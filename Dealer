@@ -8,23 +8,37 @@ public class Dealer
 	static int ranks = rank.length;
 	static int n = suit * ranks;
 
-	public static int[] createAndShuffleDeck()
+	public static List<Integer> createAndShuffleDeck()
 	{
-		int[] deck = new int[n];
+		int[] initialdeck = new int[n];
 		for(int i = 0; i < ranks; i++)
 		{
 			for (int j = 0; j < suit; j++)
 			{
-				deck[suit * i + j] = rank[i];
+				initialdeck[suit * i + j] = rank[i];
 			}		
 		}
 		for(int i = 0; i < n; i++) 
 		{
 			int r = i + (int) (Math.random() * (n - i));
-			int t = deck[r];
-			deck[r] = deck[i];
-			deck[i] = t;
+			int t = initialdeck[r];
+			initialdeck[r] = initialdeck[i];
+			initialdeck[i] = t;
 		}
+		/*
+		WHAT IS DIIIISSS
+		for(int a = 0; a < initialdeck.length; a++)
+		{
+			if(Prices[a]>largest)
+			{
+				largest = prices[a];
+				System.out.println(initialdeck);
+			}
+			else if(prices[a]<smallest)
+			{
+				smallest = prices[a];
+			}
+		}*/
 		return deck;
 	}
 	/*
