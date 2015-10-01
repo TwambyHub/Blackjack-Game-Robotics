@@ -1,0 +1,9 @@
+import java.util.*;
+
+public class TestFiles
+{
+    public static void main(String [] args)
+    {
+        ArrayList<Element> newdeck = new ArrayList<Element>(Arrays.asList(deck)
+    }
+}
