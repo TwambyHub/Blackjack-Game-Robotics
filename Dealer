@@ -25,20 +25,6 @@ public class Dealer
 			initialdeck[r] = initialdeck[i];
 			initialdeck[i] = t;
 		}
-		/*
-		WHAT IS DIIIISSS
-		for(int a = 0; a < initialdeck.length; a++)
-		{
-			if(Prices[a]>largest)
-			{
-				largest = prices[a];
-				System.out.println(initialdeck);
-			}
-			else if(prices[a]<smallest)
-			{
-				smallest = prices[a];
-			}
-		}*/
 		return deck;
 	}
 	/*
