@@ -37,6 +37,7 @@ public class HitStandSplit
                         }
                         System.out.println("ACEceptable!!!!!!!!!!!!!!\n"+
                                 "Jus' kiddin' screw you bruh");
+                                System.exit(0);
                 } 
                 else
                 {
