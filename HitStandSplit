@@ -5,9 +5,12 @@ public class HitStandSplit
        
         public static String choice()
         {
+                //This scanner is used for the user input for hit stand or split
                 Scanner inputchoice = new Scanner(System.in);
                 System.out.println("Cuh, whatchu want? Hit me up with yo choice of hit, stand, or split");
+                //This part is for taking the next input and will make it a string
                 String hchoice = inputchoice.nextLine();
+                //This is an else if tree where it decides what the user has inputed and performs the correct tasks
                 if(hchoice.equals("hit")) 
                 {
                         System.out.println("Like your chances pretty boy? 'ight, I got chu.");
@@ -35,7 +38,9 @@ public class HitStandSplit
                         System.out.println("ACEceptable!!!!!!!!!!!!!!\n"+
                                 "Jus' kiddin' screw you bruh");
                 } 
+                else
                 {
+                        //This is what happens when they input something that does not work and will automatically end the game
                         System.out.println("Homie, we ain't playin' no games up in here.\n" +
                         "Get outta here or hit me up once mo");
                         System.exit(0);
@@ -44,19 +49,13 @@ public class HitStandSplit
         }
         public static int playerHit()
         {
-                int phg = 2;
-                return phg;
         }
 
         public static int dealerHit()
         {
-                int phs = 5;
-                return phs;
         }
 
         public static int split()
         {
-                int pht = 10;
-                return pht;
         }
 }
