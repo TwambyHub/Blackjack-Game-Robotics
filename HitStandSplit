@@ -62,7 +62,7 @@ public class HitStandSplit
         return playerHand;
     }
 
-    public static int dealerHit()
+    public static List<Integer> dealerHit()
     {
         int cardCount = 0;
         ArrayList<Integer> dealerHand = new ArrayList<Integer>();
