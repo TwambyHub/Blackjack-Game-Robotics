@@ -4,29 +4,31 @@
 //not yet finished
 //next person to see this must buy stones and yolo roll -jerry & alec
 
+import java.util.*;
+
 public class Gamestate
 {
-	int[] playerHand = HitStandSplit.playerHit();
-	int[] dealerHand = HitStandSplit.dealerHit();
+	static List<Integer> playerHand = HitStandSplit.playerHit();
+	static List<Integer> dealerHand = HitStandSplit.dealerHit();
 
+	static int playerTotal = 0;
 
 	public static int getPlayerTotal()
 	{
-		int playerTotal = 0;
-		for(i = 0; i < playerHand.length - 1; i++)
+		for(int i = 0; i < playerHand.size() - 1; i++)
 		{
-			playerTotal += playerHand[i];
+			playerTotal += playerHand.get(i);
 		}
 	return playerTotal;
 	}
 
+	static int dealerTotal = 0;
 
 	public static int getDealerTotal()
 	{
-		int dealerTotal = 0;
-		for(i = 0; i < dealerHand.length - 1; i++)
+		for(int i = 0; i < dealerHand.size() - 1; i++)
 		{
-			dealerTotal += dealerHand[i];
+			dealerTotal += dealerHand.get(i);
 		}
 	return dealerTotal;
 	}
@@ -35,15 +37,15 @@ public class Gamestate
 	public static boolean playerWins()
 	{
 		boolean win = false;
-		if(int playerTotal > int dealerTotal && int playerTotal <= 21)
+		if(playerTotal > dealerTotal && playerTotal <= 21)
 		{
-			win = true
+			win = true;
 		}
 	return win;
 	}
 
 
-	public static int[] ace()
+	public static List<Integer> ace()
 	{
 
 		/*int[] something = {
@@ -51,11 +53,11 @@ public class Gamestate
 		};*/
 		if(playerTotal > 21)
 		{
-			for(int i = 0; i <playerHand.length - 1; i++)
+			for(int i = 0; i < playerHand.size(); i++)
 			{
-				if(playerHand[i] == 11)
+				if(playerHand.get(i) == 11)
 				{
-					playerHand[i] = 1;
+					playerHand.set(i, 1);
 				}
 			}
 		}
