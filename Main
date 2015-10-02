@@ -1,14 +1,9 @@
+//removed the "remove" method. it's not neede as of this version of HitStandSplit.java
+
 import java.util.*;
 
 public class Main
 {
-	public static List<Integer> remove()
-	{
-		Dealer deal = new Dealer();
-		List<Integer> deck = deal.createAndShuffleDeck();
-		list.remove(0);
-		return deck;
-	}
 	public static void main (String []args)
 	{
 		System.out.println("Sup cuh, welcome to Blackjack. Grab yo' seat and let's hit dis up G!");
