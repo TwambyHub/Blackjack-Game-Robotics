@@ -4,7 +4,8 @@ public class TestFiles
 {
     public static void main(String [] args)
     {
-        int[] deck = 
-        ArrayList<Element> newdeck = new ArrayList<Element>(Arrays.asList(deck)
+        int[] deck = {1,2,3,4,5,6,7,8,9,10,11};
+        ArrayList<Element> newdeck = new ArrayList<Element>(Arrays.asList(deck));
+        System.out.println(newdeck);
     }
 }
