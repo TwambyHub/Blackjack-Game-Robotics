@@ -1,4 +1,4 @@
-//removed the "remove" method. it's not neede as of this version of HitStandSplit.java
+//removed the "remove" method. it's not needed as of this version of HitStandSplit.java
 
 import java.util.*;
 
