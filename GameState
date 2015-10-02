@@ -19,6 +19,7 @@ public class Gamestate
 		{
 			playerTotal += playerHand.get(i);
 		}
+		System.out.println("Your total is " + playerTotal);
 	return playerTotal;
 	}
 
