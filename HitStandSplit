@@ -16,6 +16,8 @@ public class HitStandSplit
         if(hchoice.equals("hit"))
         {
             System.out.println("Like your chances pretty boy? 'ight, I got chu.");
+            playerHit();
+            deck.remove(0);
         }
         else if(hchoice.equals("stand")) 
         {
@@ -45,29 +47,24 @@ public class HitStandSplit
             } 
             else
             {
-                //This is what happens when they input something that does not work and will automatically end the game
                 System.out.println("Homie, we ain't playin' no games up in here.\n" +
                 "Get outta here or hit me up once mo");
-                System.exit(0);
             }
             return hchoice;
     }
     public static List<Integer> playerHit()
     {
-        int cardCount = 0;
         ArrayList<Integer> playerHand = new ArrayList<Integer>();
-        playerHand.add(deck.get(cardCount));
-        cardCount += 1;
+        playerHand.add(deck.get(0));
+        System.out.println("You draw a " + deck.get(0));
 
         return playerHand;
     }
 
     public static List<Integer> dealerHit()
     {
-        int cardCount = 0;
         ArrayList<Integer> dealerHand = new ArrayList<Integer>();
-        dealerHand.add(deck.get(cardCount));
-        cardCount += 1;
+        dealerHand.add(deck.get(0));
 
         return dealerHand;
     }
