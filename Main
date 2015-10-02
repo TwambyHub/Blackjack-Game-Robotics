@@ -1,5 +1,6 @@
 //removed the "remove" method. it's not needed as of this version of HitStandSplit.java
 //WORK OVER THE WEEKEND. IT IS NOT FINISHED. - jerrbear
+//ITS DUE TOMORROW! - not alec
 import java.util.*;
 
 public class Main
