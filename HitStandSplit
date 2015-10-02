@@ -2,61 +2,77 @@ import java.util.*;
 
 public class HitStandSplit
 {
-       
-        public static String choice()
+
+    static List<Integer> deck = Dealer.createAndShuffleDeck();
+    
+    public static String choice()
+    {
+        //This scanner is used for the user input for hit stand or split
+        Scanner inputchoice = new Scanner(System.in);
+        System.out.println("Cuh, whatchu want? Hit me up with yo choice of hit, stand, or split");
+        //This part is for taking the next input and will make it a string
+        String hchoice = inputchoice.nextLine();
+        //This is an else if tree where it decides what the user has inputed and performs the correct tasks
+        if(hchoice.equals("hit"))
         {
-                //This scanner is used for the user input for hit stand or split
-                Scanner inputchoice = new Scanner(System.in);
-                System.out.println("Cuh, whatchu want? Hit me up with yo choice of hit, stand, or split");
-                //This part is for taking the next input and will make it a string
-                String hchoice = inputchoice.nextLine();
-                //This is an else if tree where it decides what the user has inputed and performs the correct tasks
-                if(hchoice.equals("hit")) 
-                {
-                        System.out.println("Like your chances pretty boy? 'ight, I got chu.");
-                }
-                else if(hchoice.equals("stand")) 
-                {
-                        System.out.println("What a wuss. I be takin yo' money tonight.");
-                }
-                else if(hchoice.equals("split")) 
-                {
-                        System.out.println("Better off 2 fo' 1.");
-                }
-                else if(hchoice.equals("You know what cuh, F dis"))
-                {
-                        System.out.println("I am very sorry for your poor experience here at BalLErZ Cuhsino\n"+
+            System.out.println("Like your chances pretty boy? 'ight, I got chu.");
+        }
+        else if(hchoice.equals("stand")) 
+        {
+            System.out.println("What a wuss. I be takin yo' money tonight.");
+        }
+        else if(hchoice.equals("split")) 
+        {
+            System.out.println("Better off 2 fo' 1.");
+        }
+        else if(hchoice.equals("You know what cuh, F dis"))
+        {
+            System.out.println("I am very sorry for your poor experience here at BalLErZ Cuhsino\n"+
                                 "the staff wishes that your next visit will be more\n"+
                                 "..................................................\n"+
                                 "..................................................\n"+
                                 "..................................................\n");
-                        try {
-                                Thread.sleep(5000);
-                        } catch (InterruptedException e) {
+            try
+            {
+                Thread.sleep(5000);
+            }catch (InterruptedException e)
+            {
 
-                        }
-                        System.out.println("ACEceptable!!!!!!!!!!!!!!\n"+
-                                "Jus' kiddin' screw you bruh");
-                                System.exit(0);
-                } 
-                else
-                {
-                        //This is what happens when they input something that does not work and will automatically end the game
-                        System.out.println("Homie, we ain't playin' no games up in here.\n" +
-                        "Get outta here or hit me up once mo");
-                        System.exit(0);
-                }
-                return hchoice;
-        }
-        public static int playerHit()
-        {
-        }
+            }
+                System.out.println("ACEceptable!!!!!!!!!!!!!!\n"+
+                                    "Jus' kiddin' screw you bruh");
+                System.exit(0);
+            } 
+            else
+            {
+                //This is what happens when they input something that does not work and will automatically end the game
+                System.out.println("Homie, we ain't playin' no games up in here.\n" +
+                "Get outta here or hit me up once mo");
+                System.exit(0);
+            }
+            return hchoice;
+    }
+    public static List<Integer> playerHit()
+    {
+        int cardCount = 0;
+        ArrayList<Integer> playerHand = new ArrayList<Integer>();
+        playerHand.add(deck.get(cardCount));
+        cardCount += 1;
 
-        public static int dealerHit()
-        {
-        }
+        return playerHand;
+    }
 
-        public static int split()
-        {
-        }
+    public static int dealerHit()
+    {
+        int cardCount = 0;
+        ArrayList<Integer> dealerHand = new ArrayList<Integer>();
+        dealerHand.add(deck.get(cardCount));
+        cardCount += 1;
+
+        return dealerHand;
+    }
+
+    /*public static int split()
+    {
+    }*/
 }
