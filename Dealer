@@ -10,20 +10,20 @@ public class Dealer
 
 	public static List<Integer> createAndShuffleDeck()
 	{
-		int[] initialdeck = new int[n];
+		int[] deck = new int[n];
 		for(int i = 0; i < ranks; i++)
 		{
 			for (int j = 0; j < suit; j++)
 			{
-				initialdeck[suit * i + j] = rank[i];
+				deck[suit * i + j] = rank[i];
 			}		
 		}
 		for(int i = 0; i < n; i++) 
 		{
 			int r = i + (int) (Math.random() * (n - i));
-			int t = initialdeck[r];
-			initialdeck[r] = initialdeck[i];
-			initialdeck[i] = t;
+			int t = deck[r];
+			deck[r] = deck[i];
+			deck[i] = t;
 		}
 		/*
 		WHAT IS DIIIISSS
