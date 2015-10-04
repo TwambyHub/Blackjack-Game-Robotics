@@ -1,6 +1,7 @@
 //verify cards are less than 21
 //save each new card to database as it is generated
 //ace- 1 or 11   if 11 can fit, it is 11
+//SOMEBODY PLEASE IMPROVE THE WIN CONDITIONS - Jerry
 
 import java.util.*;
 
