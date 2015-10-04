@@ -1,66 +1,98 @@
 //verify cards are less than 21
 //save each new card to database as it is generated
 //ace- 1 or 11   if 11 can fit, it is 11
-//not yet finished
 
 import java.util.*;
 
 public class Gamestate
 {
-	static List<Integer> playerHand = HitStandSplit.playerHit();
-	static List<Integer> dealerHand = HitStandSplit.dealerHit();
+	ArrayList<Integer> playerHand;
+	ArrayList<Integer> dealerHand;
+	int playerTotal;
+	int dealerTotal;
+	boolean pStand;
 
-	static int playerTotal = 0;
-
-	public static int getPlayerTotal()
+	public Gamestate() 
 	{
-		for(int i = 0; i < playerHand.size() - 1; i++)
-		{
-			playerTotal += playerHand.get(i);
-		}
-		System.out.println("Your total is " + playerTotal);
-	return playerTotal;
+		playerHand = new ArrayList<Integer>();
+		dealerHand = new ArrayList<Integer>();
+	}
+	// static ArrayList<Integer> this.playerHand = new ArrayList<Integer>();
+ //    static ArrayList<Integer> this.dealerHand = new ArrayList<Integer>();
+
+	// static int this.playerTotal = 0;
+
+	public List<Integer> getPlayerHand() 
+	{
+		return this.playerHand;
 	}
 
-	static int dealerTotal = 0;
-
-	public static int getDealerTotal()
+	public List<Integer> getDealerHand() 
 	{
-		for(int i = 0; i < dealerHand.size() - 1; i++)
+		return this.dealerHand;
+	}
+
+	public int getPlayerTotal()
+	{
+		this.playerTotal = 0;
+		for(int i = 0; i < this.playerHand.size(); i++)
 		{
-			dealerTotal += dealerHand.get(i);
+			this.playerTotal += this.playerHand.get(i);
 		}
-	return dealerTotal;
+		System.out.println("Your total is " + this.playerTotal);
+	return this.playerTotal;
 	}
 
 
-	public static boolean playerWins()
+	public int getDealerTotal()
 	{
-		boolean win = false;
-		if(playerTotal > dealerTotal && playerTotal <= 21)
+		this.dealerTotal = 0;
+		for(int i = 0; i < this.dealerHand.size(); i++)
 		{
-			win = true;
+			this.dealerTotal += this.dealerHand.get(i);
 		}
-	return win;
+		System.out.println("Dealer's total is " + this.dealerTotal);
+	    return this.dealerTotal;
 	}
 
 
-	public static List<Integer> ace()
+	public boolean playerWins()
+	{
+		boolean pwin = false;
+		if(this.playerTotal > this.dealerTotal && this.playerTotal <= 21 && pStand || this.dealerTotal > 21)
+		{
+			pwin = true;
+		}
+	return pwin;
+	}
+
+	public boolean dealerWins()
+	{
+		boolean dwin = false;
+		if(this.dealerTotal > this.playerTotal && this.dealerTotal <= 21 && pStand || this.playerTotal > 21)
+		{
+			dwin = true;
+		}
+	return dwin;
+	}
+
+
+	public List<Integer> ace()
 	{
 
 		/*int[] something = {
 			5, 4, 1, 11
 		};*/
-		if(playerTotal > 21)
+		if(this.playerTotal > 21)
 		{
-			for(int i = 0; i < playerHand.size(); i++)
+			for(int i = 0; i < this.playerHand.size(); i++)
 			{
-				if(playerHand.get(i) == 11)
+				if(this.playerHand.get(i) == 11)
 				{
-					playerHand.set(i, 1);
+					this.playerHand.set(i, 1);
 				}
 			}
 		}
-	return playerHand;
+	return this.playerHand;
 	}
 }
