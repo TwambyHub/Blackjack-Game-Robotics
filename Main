@@ -1,21 +1,34 @@
-//removed the "remove" method. it's not needed as of this version of HitStandSplit.java
-//WORK OVER THE WEEKEND. IT IS NOT FINISHED. - jerrbear
-//ITS DUE TOMORROW! - not alec
-//WHO CARES WE CAN STILL WORK ON IT -Matt
+//ai brainlessly draws cards. i got lazy - Jerry
+
 import java.util.*;
 
 public class Main
 {
-	static List<Integer> deck = Gamestate.ace();
+	static List<Integer> deck = Dealer.createAndShuffleDeck();
 
-	public static void main (String []args)
+	public static void main(String[] args)
 	{
 		boolean game = true;
 		System.out.println("Sup cuh, welcome to Blackjack. Grab yo' seat and let's hit dis up G!");
-		while(game == true)
+		Gamestate gamestate = new Gamestate();
+
+		while(game)
 		{
-			HitStandSplit.choice();
-			Gamestate.getPlayerTotal();
+			HitStandSplit.choice(gamestate);
+			gamestate.getPlayerTotal();
+			HitStandSplit.dealerHit(gamestate);
+			gamestate.getDealerTotal();
+			gamestate.ace();
+			if(gamestate.playerWins())
+			{
+				System.out.println("You win");
+				break;
+			}
+			else if(gamestate.dealerWins())
+			{
+				System.out.println("Dealer wins");
+				break;
+			}
 		}	
 	}
 }
